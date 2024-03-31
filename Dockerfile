@@ -10,4 +10,4 @@ RUN apt install chromium chromium-driver -y
 
 RUN pip install -r requirements.txt
 
-CMD ["gunicorn", "app:app", "python", "site.py"]
+CMD ["gunicorn", "app:app", "&", "python", "site.py"]
