@@ -3,6 +3,3 @@ app = Flask(__name__)
 @app.route('/')
 def home():
   return "welcome"
-
-if True:
-  app.run()
