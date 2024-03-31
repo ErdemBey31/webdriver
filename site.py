@@ -8,13 +8,12 @@ op.add_argument("--headless")
 driver = webdriver.Chrome(options=op)
 toplam = 0
 
-try:
-  driver.get("https://codesandbox.io/p/devbox/sweet-http-62rlpc")
-  toplam += 1
-  print(f"Toplam: {toplam}")
-except Exception as e:
-  print(e)  
 while True:
-  driver.refresh()
+  try:
+    driver.get("https://codesandbox.io/p/devbox/sweet-http-62rlpc")
+    toplam += 1
+    print(f"Toplam: {toplam}")
+  except Exception as e:
+    print(e)  
   time.sleep(15)
   pass
